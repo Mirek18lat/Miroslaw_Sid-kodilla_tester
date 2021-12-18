@@ -1,14 +1,17 @@
 public class Grades {
     private int [] grades;
     private int size;
+    private int sum;
+    private int index;
+    private double average;
 
+
+    public int[] getGrades() {
+        return grades;
+    }
     public Grades() {
         this.grades = new int [10];
         this.size = 0;
-    }
-    public static void main(String[] args) {
-        String gradeValue = value;
-        System.out.println(gradeValue);
     }
     public void add(int value) {
         if (this.size == 10) {
@@ -17,5 +20,15 @@ public class Grades {
             this.grades[this.size] = value;
             this.size++;
     }
-
+    public int[] averageGrades() {
+        return grades;
+    }
+    public double averageM() {
+        while (this.index < grades.length) {
+            this.sum += grades[index];
+            this.index++;
+        }
+        this.average = sum/size;
+        return average;
+    }
 }
