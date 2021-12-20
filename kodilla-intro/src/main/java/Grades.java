@@ -1,5 +1,5 @@
 public class Grades {
-    private int [] grades;
+
     private int size;
     private int sum;
     private int index;
@@ -28,7 +28,7 @@ public class Grades {
             this.sum += grades[index];
             this.index++;
         }
-        this.average = sum/size;
+        this.average = sum/grades.length;
         return average;
     }
 }
