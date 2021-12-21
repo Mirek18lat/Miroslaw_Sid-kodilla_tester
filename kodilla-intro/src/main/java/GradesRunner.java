@@ -18,4 +18,4 @@ public class GradesRunner {
         //a.averageM();
         //System.out.println(averageM);
     }
-   }
+}

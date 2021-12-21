@@ -17,8 +17,8 @@ public class Grades {
         if (this.size == 10) {
             return;
         }
-            this.grades[this.size] = value;
-            this.size++;
+        this.grades[this.size] = value;
+        this.size++;
     }
     public int[] averageGrades() {
         return grades;

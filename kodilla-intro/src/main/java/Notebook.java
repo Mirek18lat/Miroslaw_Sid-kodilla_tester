@@ -16,7 +16,7 @@ public class Notebook {
             System.out.println("The price is good.");
         } else
             System.out.println("This notebook is quite expensive.");
-}
+    }
     public void checkWeight() {
         if (this.weight < 1000) {
             System.out.println("This notebook is light.");

@@ -15,6 +15,7 @@ public class UserM {
         for (i = 0; 0<users.length; i++ ) {
             sumage += age;
         }
-       System.out.println(sumage/ users.length);
+        double av = sumage / users.length;
+       System.out.println(av);
     }
  }
