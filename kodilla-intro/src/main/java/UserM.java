@@ -1,5 +1,4 @@
 import java.util.Arrays;
-
 public class UserM {
     String name;
     int age;
