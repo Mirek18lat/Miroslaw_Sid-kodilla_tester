@@ -1,6 +1,6 @@
 public class Grades {
 
-    private int size;
+   /* private int size;
     private int sum;
     private int index;
     private double average;
@@ -30,5 +30,5 @@ public class Grades {
         }
         this.average = sum/grades.length;
         return average;
-    }
+    }*/
 }

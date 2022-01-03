@@ -22,4 +22,10 @@ public class RandomNumbers {
         }
     return result;
     }
+
+    class NewResult {
+        int result;
+        int sum;
+    }
+
 }
