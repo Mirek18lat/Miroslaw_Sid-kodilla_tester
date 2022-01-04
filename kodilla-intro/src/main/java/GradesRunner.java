@@ -15,8 +15,9 @@ public class GradesRunner {
         g.add(1);
         g.add(32);
         g.add(10);
-        System.out.println(Arrays.toString(g.getGrades()));
+        System.out.println(Arrays.toString(Grades.grades[]();));
         //a.averageM();
         //System.out.println(averageM);
     }
-}*/
+}
+*/
