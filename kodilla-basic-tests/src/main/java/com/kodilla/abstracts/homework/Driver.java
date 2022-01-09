@@ -3,8 +3,8 @@ package com.kodilla.abstracts.homework;
 public class Driver extends Job {
 
     @Override
-    public boolean getResponsibilities() {
+    public String  getResponsibilities() {
         System.out.println("Drive a car");
-        return false;
+        return getResponsibilities();
     }
 }
