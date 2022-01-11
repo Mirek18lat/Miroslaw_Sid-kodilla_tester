@@ -3,8 +3,7 @@ package com.kodilla.abstracts.homework;
 public class President extends Job {
 
     @Override
-    public boolean getResponsibilities() {
+    public void getResponsibilities() {
         System.out.println("Big boss works!");
-        return false;
     }
 }

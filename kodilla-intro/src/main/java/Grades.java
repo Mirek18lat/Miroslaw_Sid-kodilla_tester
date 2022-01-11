@@ -18,15 +18,15 @@ public class Grades {
         this.grades[this.size] = value;
         this.size++;
     }
-    public long[] average() {
+    public double average() {
         int sum = 0;
         int index = 0;
-        while (index < grades.length) {pa
+        while (index < grades.length) {
             sum += grades[index];
             index++;
         };
-        int average = sum/size;
-        return new long[0];
+        double average = sum/size;
+        return average;
     }
 
 }

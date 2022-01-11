@@ -1,3 +1,4 @@
+/*
 public class Book {
     private String author;
     private String title;
@@ -7,4 +8,4 @@ public class Book {
         String book = Book.of("Isaac Asimov", "The Galaxy");
         return new Book(author, title);
     }
-}
+}*/

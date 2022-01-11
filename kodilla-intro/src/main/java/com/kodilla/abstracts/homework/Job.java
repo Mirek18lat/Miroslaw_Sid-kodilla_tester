@@ -7,5 +7,5 @@ public abstract class Job {
 
     public Job (){}
 
-    public abstract boolean getResponsibilities();
+    public abstract void getResponsibilities();
 }

@@ -2,7 +2,6 @@ import java.util.Arrays;
 
 public class GradesRunner {
     public static void main(String[] args) {
-        Grades g = new Grades();
         Grades a = new Grades();
         a.add(5);
         a.add(7);
@@ -14,9 +13,8 @@ public class GradesRunner {
         a.add(1);
         a.add(32);
         a.add(10);
-        g.average();
         System.out.println(Arrays.toString(a.getGrades()));
-        System.out.println(Arrays.toString(g.average()));
+        System.out.println(a.average());
     }
 }
 
