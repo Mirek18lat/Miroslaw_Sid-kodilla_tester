@@ -47,6 +47,8 @@ public class Bank {
         System.out.println(Arrays.toString(cm2.getTransactions()));
         System.out.println(cm2.totalBalance);
         System.out.println(cm2.number);
+        System.out.println(cm2.averageMachineIn);
+        System.out.println(cm2.nMashineIn);
 
         CashMachine cm3 = new CashMachine();
         cm3.addCashIn(4560);

@@ -3,7 +3,7 @@ package com.kodilla.bank.homework;
 public class CashMachine {
     double[] transactions;
     int size;
-    double number;
+    public double number;
     String name;
     public static double totalBalance;
     public double nMashineIn;
@@ -41,6 +41,10 @@ public class CashMachine {
         totalBalance -= transaction;
         nMashineOut += transaction;
 
+    }
+
+    public double getTotalBalance() {
+        return totalBalance += totalBalance;
     }
 
     public double[] getTransactions() {

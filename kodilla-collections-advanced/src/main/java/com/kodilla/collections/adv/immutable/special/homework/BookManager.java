@@ -4,26 +4,22 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-public class BookManager extends Book {
+public class BookManager {
 
-    String title;
-    String author;
-    static Set<Book> booksCheck = new HashSet<>();
+    static String title;
+    static String author;
+    static Set<Book> listBooks = new HashSet<>();
 
-    public BookManager(String title, String author) {
-        super(author, title);
-    }
     public static Book createBook (String title, String author) {
-        System.out.println(booksCheck.size());
-        if (booksCheck.contains(title) == false && booksCheck.contains(author) == false) {
-            booksCheck.add(createBook(title, author));
-            return new Book(title, author);
-        }
-        return new Book(title, author);
+        Book book = new Book(title, author);
+        if (listBooks.contains(book)) {
+            System.out.println("Objekt już istnieje");
+            } else listBooks.add(book);
 
+        return new Book(title, author);
     }
 
-    @Override
+   @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
