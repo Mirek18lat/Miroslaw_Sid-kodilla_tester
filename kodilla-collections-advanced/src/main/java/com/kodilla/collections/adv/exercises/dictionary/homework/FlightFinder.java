@@ -1,23 +1,31 @@
 package com.kodilla.collections.adv.exercises.dictionary.homework;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class FlightFinder {
 
-    Map<String, List<Flight>> warsaw = new HashMap<>();
+    List<Flight> flights = new ArrayList<>(FlightRepository.getFlightsTable());
 
     public List<Flight> findFlightsFrom(String departure) {
-        List<Flight> findFrom = warsaw.getOrDefault(departure, new ArrayList<>());
+        List<Flight> flightFrom = new ArrayList<>();
+        for (Flight findF : flights) {
+            if (findF.getDeparture().equals(departure))
+                flightFrom.add(findF);
+        }
+        System.out.println(flightFrom);
+        return flightFrom;
+    }
 
-        warsaw.put(departure, findFrom);
-        return findFlightsFrom(departure);
-
-    };
     public List<Flight> findFlightsTo(String arrival) {
-        return findFlightsTo(arrival);
+        List<Flight> flightTo = new ArrayList<>();
+        for (Flight findTo : flights) {
+            if (findTo.getArrival().equals(arrival))
+                flightTo.add(findTo);
+        }
+        System.out.println(flightTo);
+        return flightTo;
     };
+
+
 
 }
