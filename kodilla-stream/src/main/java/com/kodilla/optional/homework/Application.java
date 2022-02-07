@@ -15,7 +15,8 @@ public class Application {
         students.add(new Student("Mike Ehrmantraute", new Teacher("")));
 
         for (Student student : students) {
-            Optional<Student> optionalStudents = Optional.ofNullable(student).orElse( "<undefined>");
+            Optional<Student> optionalStudents = Optional.ofNullable(student);
+            /*orElse( "<undefined>")*/
 
             optionalStudents.ifPresent(u -> System.out.println(u.getTeacher()));
         }
