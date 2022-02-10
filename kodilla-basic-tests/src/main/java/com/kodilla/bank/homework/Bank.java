@@ -28,10 +28,17 @@ public class Bank {
         cm1.addCashOut(20);
 
         System.out.println(Arrays.toString(cm1.getTransactions()));
-        System.out.println(cm1.totalBalance);
-        System.out.println(cm1.number);
+        System.out.println("Cashmashine balance : " + cm1.getMachineTotal());
+        System.out.println("Cashmachine transaction number: " + cm1.number);
+
+        System.out.println("Total balans : " + cm1.getTotalBalance());
+
+        System.out.println("-----");
         System.out.println(cm1.averageMachineIn);
-        System.out.println(cm1.nMashineIn);
+
+
+        System.out.println("Cashmachine average :"  + cm1.getMachineAverage());
+        System.out.println("--------------------------------------");
 
         CashMachine cm2 = new CashMachine();
         cm2.addCashIn(500);
@@ -45,10 +52,14 @@ public class Bank {
         cm2.addCashOut(1231);
 
         System.out.println(Arrays.toString(cm2.getTransactions()));
-        System.out.println(cm2.totalBalance);
-        System.out.println(cm2.number);
+        System.out.println("Cashmashine balance : " + cm2.getMachineTotal());
+        System.out.println("Cashmachine transaction number: " + cm2.number);
+        System.out.println("Total balans : " + cm2.getTotalBalance());
         System.out.println(cm2.averageMachineIn);
-        System.out.println(cm2.nMashineIn);
+
+
+
+        System.out.println("--------------------------------------");
 
         CashMachine cm3 = new CashMachine();
         cm3.addCashIn(4560);
@@ -58,9 +69,21 @@ public class Bank {
         cm3.addCashOut(20);
         cm3.addCashOut(475);
         cm3.addCashOut(8);
-        cm3.addCashOut(5400.3);
+        cm3.addCashOut(5400);
         cm3.addCashOut(7);
         cm3.addCashOut(12);
+        cm3.addCashOut(33);
+        System.out.println("Cashmashine balance : " + cm3.getMachineTotal());
+        System.out.println("Cashmachine transaction number: " + cm3.number);
+        System.out.println("--------------------------------------");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("Total balans : " + cm1.getTotalBalance());
+        System.out.println("Number transaction IN : " + CashMachine.nMachineIn);
+        System.out.println("Average transaction IN : " + CashMachine.cashIn/CashMachine.nMachineIn);
+        System.out.println("Number transaction OUT : " + CashMachine.nMachineOut);
+        System.out.println("Average transaction OUT : " + CashMachine.cashOut/CashMachine.nMachineOut);
+
 
 
 
