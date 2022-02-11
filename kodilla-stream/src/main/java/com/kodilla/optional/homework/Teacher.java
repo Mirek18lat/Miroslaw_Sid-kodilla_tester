@@ -7,7 +7,7 @@ class Teacher {
     public Teacher (String name) {
         this.name = name;
     }
-Teacher optional = new Teacher("<undefined>");
+
 
     public String getTeacherName() {
         return name;

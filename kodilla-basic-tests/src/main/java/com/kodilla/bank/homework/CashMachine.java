@@ -36,6 +36,7 @@ public class CashMachine {
         return nMachineIn;
     }
 
+
     public void addCashOut(double transaction) {
         this.size++;
         double[] newOutMachineArray = new double[this.size];

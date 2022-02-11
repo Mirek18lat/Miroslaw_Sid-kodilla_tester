@@ -11,14 +11,14 @@ public class Application {
         students.add(new Student("Jessie Pinkman", new Teacher("Sylvester Stallone")));
         students.add(new Student("Tuco Salamanca", new Teacher("Sylvester Stallone")));
         students.add(new Student("Gus Firing", new Teacher("Arnold  Schwarzenegger")));
-        students.add(new Student("Gale Boetticher", new Teacher("")));
-        students.add(new Student("Mike Ehrmantraute", new Teacher("")));
+        students.add(new Student("Gale Boetticher", null));
+        students.add(new Student("Mike Ehrmantraute", null));
 
         for (Student student : students) {
-            Optional<Student> optionalStudents = Optional.ofNullable(student);
-            /*orElse( "<undefined>")*/
-
-            optionalStudents.ifPresent(u -> System.out.println(u.getTeacher()));
+            Optional<Teacher> optionalTeacher = Optional.ofNullable(student.teacher);
+            Teacher teacherName = optionalTeacher.orElse(new Teacher("<undefined>"));
+            System.out.println("uczeń: " + student.name + ", " + teacherName);
         }
     }
 }
+
