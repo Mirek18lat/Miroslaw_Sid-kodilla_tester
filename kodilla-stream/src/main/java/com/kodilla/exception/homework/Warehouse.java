@@ -11,16 +11,18 @@ public class Warehouse {
         orders.add(order);
         return orders;
     }
-    public Set<Order> getOrder(String number) {
-        try{ getOrders()
-                 .stream()
+    public Order getOrder(String number) {
+        Order order = getOrders()
+                .stream()
                 .filter(n -> n.getNumber().equals(number))
                 .findAny().get();
+        return order;
+    }
 
-        } catch (Exception e) {
-            System.out.println("The order doesn't exist in warahaouse databese. Pleae try another number.");
-        }
-        return getOrders();
+    public String isOrderInUse (String number) throws OrderDoesntExistException {
+        if (getOrder(number).equals(number))
+            return getOrder(number).toString();
+        throw new OrderDoesntExistException();
     }
 
     public Set<Order> getOrders() {
@@ -32,3 +34,14 @@ public class Warehouse {
         return super.toString();
     }
 }
+/*    public Set<Order> getOrder(String number) {
+        try{ getOrders()
+                .stream()
+                .filter(n -> n.getNumber().equals(number))
+                .findAny().get();
+
+        } catch (Exception e) {
+            System.out.println("The order doesn't exist in warahaouse databese. Pleae try another number.");
+        }
+        return getOrders();
+    }*/
