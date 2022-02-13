@@ -1,7 +1,6 @@
 package com.kodilla.exception;
 
 import java.util.Scanner;
-import java.util.concurrent.TransferQueue;
 
 public class UserDialogs {
     public static int getNumberOfRounds() {
