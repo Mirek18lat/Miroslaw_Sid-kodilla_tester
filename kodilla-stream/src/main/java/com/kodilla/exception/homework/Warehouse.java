@@ -1,28 +1,22 @@
 package com.kodilla.exception.homework;
 
 import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 
 public class Warehouse {
     Set<Order> orders = new HashSet<>();
 
-    public Set<Order> addOrder(Order order) {
+    public Order addOrder(Order order) {
         orders.add(order);
-        return orders;
-    }
-    public Order getOrder(String number) {
-        Order order = getOrders()
-                .stream()
-                .filter(n -> n.getNumber().equals(number))
-                .findAny().get();
         return order;
     }
+    public Order getOrder(String number) throws OrderDoesntExistException {
+        Order checkOrder = getOrders()
+                .stream()
+                .filter(n -> n.getNumber().equals(number))
+                .findAny().orElseThrow(OrderDoesntExistException::new);
 
-    public String isOrderInUse (String number) throws OrderDoesntExistException {
-        if (getOrder(number).equals(number))
-            return getOrder(number).toString();
-        throw new OrderDoesntExistException();
+        return checkOrder;
     }
 
     public Set<Order> getOrders() {

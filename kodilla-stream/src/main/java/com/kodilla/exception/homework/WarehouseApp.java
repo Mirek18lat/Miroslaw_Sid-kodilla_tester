@@ -12,12 +12,13 @@ public class WarehouseApp {
         warehouse.addOrder(new Order("Order5"));
         warehouse.addOrder(new Order("Order6"));
 
-    warehouse.getOrder( "Order5");
+
     try {
-        warehouse.isOrderInUse("Order10");
-    } catch (OrderDoesntExistException e) {
-        System.out.println("The order doesn't exist in warehouse database. Please try another number.");
-    }
-        System.out.println("You find your order. Check another one.");
+        Order order3 =  warehouse.getOrder( "Order");
+        System.out.println("You find your order : " + order3 +". Check another one.");
+        } catch (OrderDoesntExistException e) {
+            System.out.println("The order doesn't exist in warehouse database. Please try another number.");
+        }
+
     }
 }
