@@ -14,7 +14,7 @@ public class WarehouseApp {
 
 
     try {
-        Order order3 =  warehouse.getOrder( "Order");
+        Order order3 =  warehouse.getOrder( "Order9");
         System.out.println("You find your order : " + order3 +". Check another one.");
         } catch (OrderDoesntExistException e) {
             System.out.println("The order doesn't exist in warehouse database. Please try another number.");
