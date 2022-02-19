@@ -11,7 +11,7 @@ class StringManipulatorTestSuite {
     private StringManipulator manipulator = new StringManipulator();
 
     @ParameterizedTest
-    @CsvSource(value = {"test, tset", "OtHEr,rehto", "EVent,tneve", "null,llun", "A,a"})
+    @CsvFileSource(resources = "/stringWithLowerCase.csv", numLinesToSkip = 1)
     public void shouldReverseStringWithLowerCase (String input, String expected) {
         assertEquals(expected, manipulator.reverseWithLowerCase(input));
     }
@@ -23,7 +23,7 @@ class StringManipulatorTestSuite {
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"te,st:1", "..OtHEr :0", "E,V,e,n.t:3", "null :0", "A:0"}, delimiter = ':')
+    @CsvFileSource(resources = "/shouldCountNumberOfCommas.csv", numLinesToSkip = 0,  delimiter = ':')
     public void shouldCountNumberOfCommas(String input, int expected) {
         assertEquals(expected, manipulator.countNumberOfCommas(input));
     }
