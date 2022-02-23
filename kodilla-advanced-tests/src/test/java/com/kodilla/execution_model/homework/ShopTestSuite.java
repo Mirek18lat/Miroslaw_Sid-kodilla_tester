@@ -1,7 +1,6 @@
 package com.kodilla.execution_model.homework;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.time.LocalDate;
 
@@ -18,17 +17,6 @@ class ShopTestSuite {
     Order pear2 = new Order(105.00, LocalDate.of(2018, 3, 22), "MICLIP");
     Order apple2 = new Order(60.00, LocalDate.of(2014, 8, 10), "ANDPOL");
 
-    @BeforeEach
-    public void initiallizeShop() {
-        shop.addOrder(banana);
-        shop.addOrder(lime);
-        shop.addOrder(pear);
-        shop.addOrder(apple);
-        shop.addOrder(banana2);
-        shop.addOrder(lime2);
-        shop.addOrder(pear2);
-        shop.addOrder(apple2);
-    }
 
     @Test
     public void shouldCountOrdersFromBeforeEach() {
@@ -45,5 +33,50 @@ class ShopTestSuite {
         //then
         assertEquals(4, shop.returnListFrom2Year().size());
     }
+    @Test
+    public void getMaxValueOrder() {
+        //given
+        //when
 
+        //then
+        assertEquals(105.00, shop.getMaxValueOrder());
+    }
+
+    @Test
+    public void getMinValueOrder() {
+        //given
+        //when
+
+        //then
+        assertEquals(15.00, shop.getMinValueOrder());
+    }
+
+
+
+    @BeforeEach
+    public void initializeShop() {
+        shop.addOrder(banana);
+        shop.addOrder(lime);
+        shop.addOrder(pear);
+        shop.addOrder(apple);
+        shop.addOrder(banana2);
+        shop.addOrder(lime2);
+        shop.addOrder(pear2);
+        shop.addOrder(apple2);
+    }
+
+    @AfterEach
+    public void resetValues() {
+        System.out.println("Resetting values...");
+    }
+
+    @BeforeAll
+    public static void displayIntroMessage() {
+        System.out.println("Starting testing");
+    }
+
+    @AfterAll
+    public static void displayGoodByeMessage() {
+        System.out.println("Finishing testing");
+    }
 }
