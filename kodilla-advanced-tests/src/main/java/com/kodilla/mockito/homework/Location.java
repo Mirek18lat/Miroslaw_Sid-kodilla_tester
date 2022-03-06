@@ -3,11 +3,9 @@ package com.kodilla.mockito.homework;
 import com.kodilla.notification.Notification;
 
 public class Location {
-    User user;
     String location;
 
-    Location(User user, String location){
-        this.user = user;
+    Location(String location){
         this.location = location;
     }
 

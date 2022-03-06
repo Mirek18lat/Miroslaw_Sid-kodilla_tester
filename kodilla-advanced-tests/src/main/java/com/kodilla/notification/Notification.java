@@ -11,5 +11,4 @@ public class Notification {
     public void addUser(User user) {
 
     }
-
 }

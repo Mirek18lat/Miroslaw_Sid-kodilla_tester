@@ -2,28 +2,38 @@ package com.kodilla.mockito.homework;
 
 import com.kodilla.notification.Notification;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class NotificationWeatherServices {
-    private Set<Location> locations = new HashSet<>();
-    List<User> allUsers = new ArrayList<>();
 
-    public void addSubscriber (Location location) {
-        this.locations.add(location);
-        allUsers.add(location.getUser());
-    }
 
-    public void sendNotificationLocationSubscriber (Notification notification) {
-        this.locations.forEach(location -> location.receiveWeatherNotification(notification));
+    public void addSubscriber (Location location, User user) {
+
+        Map<Location, User> locationMap = new HashMap<>();
+
+        User john = new User("John Stevenson");
+        User jessie = new User("Jessie Pinkman");
+        User bart = new User("Bart Simpson");
+
+        Location berlin = new Location("Berlin");
+        Location paris = new Location("Paris");
+        Location kielce = new Location("Kielce");
+
+        locationMap.put(berlin, john);
+        locationMap.put(berlin, jessie);
+        locationMap.put(kielce, john);
+        locationMap.put(kielce, jessie);
+        locationMap.put(paris, john);
+        locationMap.put(paris, bart);
+        for (Map.Entry<Location, User> locationUserEntry : locationMap.entrySet())
+        System.out.println(locationUserEntry.getKey().getLocation() + "  " +locationUserEntry.getValue());
     }
 
 /*    public void sendNotificationAllSubscriber (Notification notification) {
         locations.forEach(location -> location.receiveWeatherNotification(notification));
     }*/
     
+/*
     public void sendGlobalNotification (Notification notification) {
         this.allUsers.forEach(user -> user.receiveGlobalNotification(notification));
     }
@@ -31,5 +41,6 @@ public class NotificationWeatherServices {
     public  void removeLocationSubscriber(Location location){
         this.locations.remove(location);
     }
+*/
 
 }
