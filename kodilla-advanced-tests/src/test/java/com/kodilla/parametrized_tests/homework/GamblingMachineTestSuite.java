@@ -12,7 +12,7 @@ import static java.util.regex.Pattern.matches;
 import static org.junit.jupiter.api.Assertions.*;
 
 class GamblingMachineTestSuite {
-    Set<Integer> userNumbers = new HashSet<>();
+/*    Set<Integer> userNumbers = new HashSet<>();
     @ParameterizedTest
     @CsvFileSource(resources = "/machineNumbers.csv")
     public void shouldCheckNumberTrue (String input) throws InvalidNumbersException {
@@ -24,5 +24,5 @@ class GamblingMachineTestSuite {
             userNumbers.add(number);
         }
         assertEquals(6,gamblingMachine.howManyWins(userNumbers));
-    }
+    }*/
 }

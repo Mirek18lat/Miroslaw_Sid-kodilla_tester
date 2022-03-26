@@ -4,6 +4,7 @@ import com.kodilla.notification.Notification;
 
 public class Location {
     String location;
+    User user;
 
     Location(String location){
         this.location = location;
